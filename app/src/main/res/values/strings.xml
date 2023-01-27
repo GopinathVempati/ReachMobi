@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ReachMobi</string>
+    <string name="required_internet">NO Internet Connection.Please check your internet connection and reopen the app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sport_name">Sport Name :</string>
+    <string name="league_name">League Name :</string>
+    <string name="season">Season :</string>
+    <string name="description">Description :</string>
+    <string name="country">Country :</string>
+    <string name="search_by_country">Search by country*</string>
+    <string name="search_by_sport_name_optional">Search by sport name (optional)</string>
+</resources>

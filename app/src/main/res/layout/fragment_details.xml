@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sportViewModel"
+            type="com.mobi.reachmobi.viewmodels.SportsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/country"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countryNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{sportViewModel.countryName}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/countryName"
+                app:layout_constraintStart_toEndOf="@id/countryName"
+                app:layout_constraintTop_toTopOf="@id/countryName"
+                tools:text="USA" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sportName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/sport_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countryName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sportNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{sportViewModel.sportName}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/sportName"
+                app:layout_constraintStart_toEndOf="@id/sportName"
+                app:layout_constraintTop_toTopOf="@id/sportName"
+                tools:text="Soccer" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/leagueName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/league_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sportName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/leagueNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{sportViewModel.leagueName}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/leagueName"
+                app:layout_constraintStart_toEndOf="@id/leagueName"
+                app:layout_constraintTop_toTopOf="@id/leagueName"
+                tools:text="League" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currentSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/season"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/leagueName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currentSeasonTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{sportViewModel.currentSeason}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/currentSeason"
+                app:layout_constraintStart_toEndOf="@id/currentSeason"
+                app:layout_constraintTop_toTopOf="@id/currentSeason"
+                tools:text="2022" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descrpition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentSeason" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@{sportViewModel.description}"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/descrpition"
+                app:layout_constraintTop_toTopOf="@id/descrpition"
+                tools:text="NA" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
